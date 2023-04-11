@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@bishop-mono-repo/bishop-angular-material": [
+        "libs/bishop-angular-material/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
