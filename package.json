@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ui:bishop": "nx serve bishop-mono-repo"
+    "ui:bishop": "nx serve bishop-mono-repo --port 4221 --open"
   },
   "private": true,
   "dependencies": {

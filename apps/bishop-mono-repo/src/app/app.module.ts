@@ -10,9 +10,11 @@ import { appReducer } from '../store/reducers/app/app-reducer';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BishopAngularMaterialModule } from "../../../../libs/bishop-angular-material/src/index"
 import { HttpInterceptor } from '../services/interceptors/http-interceptor';
+import { AuthPageComponent } from './pages/auth/auth-page/auth-page.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AuthPageComponent, LoginComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

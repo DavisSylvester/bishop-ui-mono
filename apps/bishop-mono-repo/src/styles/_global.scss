@@ -1,0 +1,21 @@
+@import './colors';
+@import "./layout";
+@import "./fonts";
+
+
+
+
+.component-stack {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Cormoran Garamond';
+
+}
+
+.component-container {
+  box-sizing: border-box;
+  display: flex;
+}
+

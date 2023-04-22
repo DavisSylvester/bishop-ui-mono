@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
 
 
-  isLoading$: Observable<{ loading: boolean; activeHttpRequests: number; }> | undefined;
+  isLoading$: Observable<boolean> | undefined;
 
 
   title = 'bishop-mono-repo';
@@ -25,14 +25,19 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     console.log('STarting');
 
-    this.isLoading$ = this.store.select('App');
+    this.isLoading$ = this.store.select(isLoadingSelector);
 
   }
 
   getData() {
-    this.http.get('https://cat-fact.herokuapp.com/facts').subscribe((x) => {
+
+    //https://deelay.me/5000/https://picsum.photos/200/300
+
+      this.http.get('https://cat-fact.herokuapp.com/facts2').subscribe((x) => {
       console.log(x);
     });
+
+
   }
 
 

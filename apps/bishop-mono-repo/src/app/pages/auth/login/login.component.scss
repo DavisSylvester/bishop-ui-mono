@@ -1,0 +1,63 @@
+@import "../../../../styles/global";
+
+:host {
+  @extend .layout-general;
+  min-height: 500px;
+  max-width: 400px;
+  width: 80%;
+
+}
+
+.login-wrapper {
+  color: #5A5A5F;
+  font-family: 'Cormoran Garamond';
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 44px;
+
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  label.forgot-password {
+    color: $primary;
+    cursor: pointer;
+
+  }
+
+  label.create-account {
+    color: $primary;
+    cursor: pointer;
+  }
+
+
+  input {
+    margin-bottom: 10px;
+    height: 32px;
+    line-height: 32px;
+    font-size:  20px;
+    width: 100%;
+  }
+
+  button {
+    background-color: $primary;
+    color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size:  20px;
+    line-height:  24px;
+    letter-spacing: 1px;
+    padding: 10px 3px;
+  }
+
+
+}
+
+.space-around {
+  justify-content: space-between;
+}

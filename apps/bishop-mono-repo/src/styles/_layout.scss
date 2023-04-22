@@ -1,0 +1,24 @@
+@import "./colors";
+
+
+.layout-general {
+  box-sizing: border-box;
+  display: flex;
+}
+
+
+.row {
+  @extend .layout-general;
+  height: 100%;
+}
+
+.half {
+  @extend .layout-general;
+  width: 50%;
+  height: 100%;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}

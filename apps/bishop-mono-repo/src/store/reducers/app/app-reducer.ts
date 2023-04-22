@@ -5,23 +5,25 @@ import { AppStore } from "../../interfaces/AppStore";
 
 
 const fetchingDataReducer = (state: AppStore) => {
+
+  const currentHttpRequest = state.App.activeHttpRequests + 1;
   return {
     ...state,
     App: {
-      // ...state.App,
-      activeHttpRequests: state.App.activeHttpRequests + 1,
-      loading: true
+      activeHttpRequests: currentHttpRequest,
+      loading: (currentHttpRequest && currentHttpRequest > 0) ? true : false,
     }
 
   };
 }
 
 const activeHttpRequestDecreaserReducer = (state: AppStore) => {
+  const currentHttpRequest = ((state.App.activeHttpRequests - 1) <= 0) ? 0 : state.App.activeHttpRequests - 1;
   return {
     ...state,
     App: {
-      ...state.App,
-      activeHttpRequests: state.App.activeHttpRequests - 1,
+      activeHttpRequests: currentHttpRequest,
+      loading: (currentHttpRequest > 0) ? true : false,
     }
 
   };

@@ -1,15 +1,1 @@
- <pre>isLoading: {{ (isLoading$ | async)?.loading   }}</pre>
- <div class="loader-wrapper" *ngIf="isLoading$ | async">
-
-  <mat-progress-spinner
-    class="example-margin"
-    [color]="'primary'"
-    [mode]="'indeterminate'"
-    [value]="50"
-  >
-  </mat-progress-spinner>
-</div>
-<h1>Hello Davis</h1>
-<Button (click)="getData()"> GET DATA</Button>
-
-<router-outlet></router-outlet>
+<router-outlet class="max"></router-outlet>

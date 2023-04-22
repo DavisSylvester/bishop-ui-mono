@@ -6,9 +6,6 @@ export const AppSelector = (state: AppStore) => {
 };
 
 export const isLoadingSelector = createSelector(AppSelector, (state) => {
-
-  console.log(state);
-  return state.loading || false;
-
-
+// @ts-ignore
+  return  state.App.loading;
 });
