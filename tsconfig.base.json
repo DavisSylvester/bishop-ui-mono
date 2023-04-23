@@ -17,7 +17,8 @@
     "paths": {
       "@bishop-mono-repo/bishop-angular-material": [
         "libs/bishop-angular-material/src/index.ts"
-      ]
+      ],
+      "libs/*": ["./libs/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

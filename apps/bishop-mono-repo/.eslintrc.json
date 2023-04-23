@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "bishop-mono-repo",
+            "prefix": "bf",
             "style": "kebab-case"
           }
         ]

@@ -1,13 +1,19 @@
-<section class="component-stack login-wrapper">
+<form [formGroup]="loginForm" class="component-stack login-wrapper">
   <h2>Login</h2>
   <label>Email</label>
-  <input type="email" />
+  <input type="email" formControlName="email" />
+  <span
+    class="error-text"
+    *ngIf="loginForm.get('email')?.errors &&
+           loginForm.get('email')?.hasError('required') &&
+           loginForm.get('email')?.touched">
+  * Please enter valid email address</span>
   <label>Password</label>
-  <input type="password" />
-  <label class="forgot-password">Forgot Password</label>
-  <button (click)="checkLogin()">Login</button>
+  <input type="password" formControlName="password"  />
+  <label class="forgot-password" (click)="navigateTo('forgot-password')">Forgot Password</label>
+  <button (click)="checkLogin()" [disabled]="loginForm.invalid">Login</button>
   <div class="row space-around">
     <label>Not a Member?</label>
-    <label class="create-account">Create Account Now</label>
+    <label class="create-account" (click)="navigateTo('create-account')">Create Account Now</label>
   </div>
-</section>
+</form>

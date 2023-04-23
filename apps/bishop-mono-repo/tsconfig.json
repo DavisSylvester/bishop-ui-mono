@@ -9,7 +9,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "styles/*": ["./src/styles/*"]
+      "styles/*": ["./src/styles/*"],
+      
     }
   },
   "files": [],
