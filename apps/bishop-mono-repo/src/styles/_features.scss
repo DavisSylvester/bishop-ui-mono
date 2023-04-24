@@ -1,0 +1,16 @@
+@import './colors';
+@import "./layout";
+@import "./fonts";
+
+.component-host {
+  @extend .layout-general;
+  min-height: 500px;
+  max-width: 400px;
+  width: 80%;
+}
+
+
+.auth-component-host {
+  @extend .component-host;
+}
+

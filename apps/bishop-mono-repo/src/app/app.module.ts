@@ -5,8 +5,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 import { appReducer } from '../store/reducers/app/app-reducer';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BishopAngularMaterialModule } from "libs/bishop-angular-material/src/index"
@@ -14,10 +17,12 @@ import { HttpInterceptor } from '../services/interceptors/http-interceptor';
 import { AuthPageComponent } from './pages/auth/auth-page/auth-page.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-password.component';
+import { CreateAccountComponent } from './pages/auth/create-account/create-account.component';
+import { SocialMediaComponent } from './pages/auth/social-media/social-media.component';
 
 
 @NgModule({
-  declarations: [AppComponent, AuthPageComponent, LoginComponent, ForgotPasswordComponent],
+  declarations: [AppComponent, AuthPageComponent, LoginComponent, ForgotPasswordComponent, CreateAccountComponent, SocialMediaComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -37,6 +42,7 @@ import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-pas
         persist: true
       }
     }),
+    FontAwesomeModule,
     BishopAngularMaterialModule
   ],
   providers: [

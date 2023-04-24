@@ -1,0 +1,43 @@
+<form [formGroup]="createAccountForm" class="component-stack">
+  <h2>Create Account</h2>
+
+  <div class="row right">
+    <span class="mandatory">* Mandatory fields</span>
+  </div>
+
+  <label>First Name</label>
+  <input type="text" formControlName="firstName" />
+  <span
+    class="error-text"
+    *ngIf="createAccountForm.get('email')?.errors &&
+           createAccountForm.get('email')?.hasError('required') &&
+           createAccountForm.get('email')?.touched">
+  * Please enter first name</span>
+
+  <label>Last Name</label>
+  <input type="text" formControlName="lastName" />
+  <span
+    class="error-text"
+    *ngIf="createAccountForm.get('lastName')?.errors &&
+           createAccountForm.get('lastName')?.hasError('required') &&
+           createAccountForm.get('lastName')?.touched">
+  * Please enter your last Name</span>
+
+  <label>Email</label>
+  <input type="email" formControlName="email" />
+  <span
+    class="error-text"
+    *ngIf="createAccountForm.get('email')?.errors &&
+           createAccountForm.get('email')?.hasError('required') &&
+           createAccountForm.get('email')?.touched">
+  * Please enter valid email address</span>
+
+  <label>Password</label>
+  <input type="password" formControlName="password"  />
+
+  <button (click)="createAccount()" [disabled]="createAccountForm.invalid">Login</button>
+
+  <div class="social-media">
+    <bf-auth-social-media></bf-auth-social-media>
+  </div>
+</form>

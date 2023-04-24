@@ -1,0 +1,71 @@
+@import './colors';
+@import "./layout";
+@import "./fonts";
+
+
+form {
+  color: #5A5A5F;
+  font-family: 'Cormoran Garamond';
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 44px;
+
+  }
+
+  label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  label.forgot-password {
+    color: $primary;
+    cursor: pointer;
+
+  }
+
+  label.create-account {
+    color: $primary;
+    cursor: pointer;
+  }
+
+
+  input {
+    margin-bottom: 10px;
+    height: 32px;
+    line-height: 32px;
+    font-size:  20px;
+    width: 100%;
+    text-transform: lowercase;
+
+    &::placeholder {
+      text-transform: capitalize;
+      font-size: 16px;
+    }
+  }
+
+  button {
+    background-color: $primary;
+    color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size:  20px;
+    line-height:  24px;
+    letter-spacing: 1px;
+    padding: 10px 3px;
+
+
+
+    &:hover {
+      border: 6px solid darken($color: $primary, $amount: 5);
+    }
+
+    &:disabled {
+      background-color: #5A5A5F;
+      border-style: none;
+    }
+  }
+
+
+}

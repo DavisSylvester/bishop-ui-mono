@@ -1,0 +1,18 @@
+@import "../../../../styles/global";
+
+:host {
+  @extend .layout-general;
+  min-height: 500px;
+  max-width: 400px;
+  width: 80%;
+}
+.social-media {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+span.mandatory {
+  font-size: 18px;
+}

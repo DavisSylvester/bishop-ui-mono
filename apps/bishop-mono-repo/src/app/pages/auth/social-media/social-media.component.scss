@@ -1,0 +1,35 @@
+@import '../../../../styles/global';
+
+:host {
+  display: flex;
+  min-width: 400px;
+}
+
+#social-media-wrapper {
+  @extend .layout-general;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Proza Libre Medium';
+  color: $primary;
+  font-size: 22px;
+
+  div {
+    width: 100%;
+    margin-bottom: 20px;
+
+    div.row {
+      border: 1px solid $primary;
+      padding: 10px 20px;
+      fa-icon {
+        min-width: 100px;
+        width: 20%;
+        max-width: 20%;
+        text-align: center;
+      }
+      span {
+        width: 80%;
+        display: inline-block;
+      }
+    }
+  }
+}
