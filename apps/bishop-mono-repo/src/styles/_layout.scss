@@ -6,10 +6,12 @@
   display: flex;
 }
 
-
+.tall-row {
+  height: 100%;
+  @extend .layout-general;
+}
 .row {
   @extend .layout-general;
-  height: 100%;
 }
 
 .half {
